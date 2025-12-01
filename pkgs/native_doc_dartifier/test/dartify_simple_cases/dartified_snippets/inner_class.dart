@@ -4,7 +4,8 @@
 import '../bindings.dart';
 
 bool innerClassCall() {
-  final acc1 = Accumulator$DoublingAccumulator(Accumulator());
+  final acc = Accumulator();
+  final acc1 = Accumulator$DoublingAccumulator(acc);
   acc1.add(10);
   acc1.add$1(10, 10);
   acc1.add$2(10, 10, 10);

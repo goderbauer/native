@@ -5,9 +5,9 @@ import 'package:jni/jni.dart';
 import '../bindings.dart';
 
 bool backAndForthStrings() {
-  final name = 'World'.toJString();
+  const name = 'World';
   final example = Example();
-  final greeting = example.greet(name)?.toDartString();
+  final greeting = example.greet(name.toJString())?.toDartString();
   print(greeting);
   return greeting == 'Hello World';
 }
